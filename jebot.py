@@ -111,7 +111,7 @@ async def ytdl_with_button(c: Client, message: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=message.chat.id,
-                    text="Sorry, You are Banned to use me. Contact my [Support Group](https://t.me/InfinityBots_Support).",
+                    text="Sorry, You are Banned to use me. Contact my [Support Group](https://t.me/tamil_chat_group_1).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
