@@ -79,9 +79,9 @@ async def about(client, message):
                chat_id=message.chat.id,
                text="""<b>About AnyDL Bot!</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/social_mechanic_1997">Jason</a>
+<b>♞ Developer:</b> <a href="https://t.me/social_mechanic_1997">SOCIAL MECHANIC</a>
 
-<b>♞ Support:</b> <a href="https://t.me/technology_corner_1">Infinity BOTs Support</a>
+<b>♞ Support:</b> <a href="https://t.me/technology_corner_1">Technology corner</a>
 
 <b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
