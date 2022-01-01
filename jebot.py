@@ -18,7 +18,7 @@ Jebot = Client(
 
 YTDL_REGEX = (r"^((?:https?:)?\/\/)"
               r"?((?:www|m)\.)"
-              r"?((?:youtube\.com|youtu\.be|xvideos\.com|pornhub\.com"
+              r"?((?:youtube\.com|youtu\.be|xvideos\.com|pornhub\.com|Instagram\.com|xnxx\.com"
               r"|xhamster\.com|xnxx\.com))"
               r"(\/)([-a-zA-Z0-9()@:%_\+.~#?&//=]*)([\w\-]+)(\S+)?$")
 s2tw = OpenCC('s2tw.json').convert
@@ -29,9 +29,9 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm AnyDL Bot
+               text="""<b>Hey There, I'm AngeL Bot
 
-I can download video or audio from Youtube, Pornhub and Xhamster. Made by @JEBotZ.
+I can download video or audio from Youtube, instagram and Facebook url links downlod . Made by @social_mechanic_1997.
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -39,10 +39,10 @@ Hit help button to find out more about how to use me</b>""",
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/Infinity_BOTs")
+                                            "Channel", url="https://t.me/technology_corner_1")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/AnyDL-Bot")
+                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-TEAM-NRD/VIDEO-DOWNLODER")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -55,9 +55,9 @@ async def help(client, message):
                chat_id=message.chat.id,
                text="""<b>AnyDL Bot Help!
 
-Just send a Youtube, Pornhub or Xhamster video url to download it in video or audio format!
+Just send a Youtube, instagram or facebook video url to download it in video or audio format!
 
-Join @Infinity_BOTs</b>""",
+Join @technology_corner_1</b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -66,7 +66,7 @@ Join @Infinity_BOTs</b>""",
                                             "About", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/AnyDL-Bot")
+                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-TEAM-NRD/VIDEO-DOWNLODER")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -79,19 +79,19 @@ async def about(client, message):
                chat_id=message.chat.id,
                text="""<b>About AnyDL Bot!</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/ImJanindu">Jason</a>
+<b>♞ Developer:</b> <a href="https://t.me/social_mechanic_1997">Jason</a>
 
-<b>♞ Support:</b> <a href="https://t.me/InfinityBOTs_Support">Infinity BOTs Support</a>
+<b>♞ Support:</b> <a href="https://t.me/technology_corner_1">Infinity BOTs Support</a>
 
 <b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
-<b>Join @Infinity_BOTs</b>""",
+<b>Join @technology_corner_1</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/AnyDL-Bot")
+                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-TEAM-NRD/VIDEO-DOWNLODER")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -133,7 +133,7 @@ async def ytdl_with_button(c: Client, message: Message):
         except Exception:
             await c.send_message(
                 chat_id=message.chat.id,
-                text="Something went Wrong. Contact my [Support Group](https://t.me/InfinityBots_Support).",
+                text="Something went Wrong. Contact my [Support Group](https://t.me/tamil_chat_group_1).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -352,7 +352,7 @@ async def button(bot, update):
 print(
     """
 Bot Started!
-Join @Infinity_BOTs
+Join @technology_corner_1
 """
 )
 
