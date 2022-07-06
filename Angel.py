@@ -9,7 +9,7 @@ from opencc import OpenCC
 from config import Config
 import wget
 
-Jebot = Client(
+Angel = Client(
    "AnyDL Bot",
    api_id=Config.APP_ID,
    api_hash=Config.API_HASH,
@@ -24,10 +24,10 @@ YTDL_REGEX = (r"^((?:https?:)?\/\/)"
 s2tw = OpenCC('s2tw.json').convert
 
 
-@Jebot.on_message(filters.command("start"))
+@Angel.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_message(
+       await Angel.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm AngeL Bot
 
@@ -39,25 +39,25 @@ Hit help button to find out more about how to use me</b>""",
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/technology_corner_1")
+                                            "Channel", url="https://t.me/social_mechanic")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-TEAM-NRD/VIDEO-DOWNLODER")
+                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-1997/VIDEO-DOWNLODER")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("help"))
+@Angel.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
-        await Jebot.send_message(
+        await Angel.send_message(
                chat_id=message.chat.id,
                text="""<b>AnyDL Bot Help!
 
 Just send a Youtube, instagram or facebook video url to download it in video or audio format!
 
-Join @technology_corner_1</b>""",
+Join @social_mechanic </b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -66,32 +66,32 @@ Join @technology_corner_1</b>""",
                                             "About", callback_data="about"),
                                   ],[
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-TEAM-NRD/VIDEO-DOWNLODER")
+                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-1997/VIDEO-DOWNLODER")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("about"))
+@Angel.on_message(filters.command("about"))
 async def about(client, message):
     if message.chat.type == 'private':   
-        await Jebot.send_message(
+        await Angel.send_message(
                chat_id=message.chat.id,
                text="""<b>About AnyDL Bot!</b>
 
-<b>♞ Developer:</b> <a href="https://t.me/social_mechanic_1997">SOCIAL MECHANIC</a>
+<b>♞ Developer:</b> <a href="https://t.me/social_mechanic_1997">CODE OWNER</a>
 
-<b>♞ Support:</b> <a href="https://t.me/technology_corner_1">Technology corner</a>
+<b>♞ Support:</b> <a href="https://t.me/SOCIAL_MECHANIC">SOCIAL MECHANIC</a>
 
 <b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
 
-<b>Join @technology_corner_1</b>""",
+<b>Join @SOCIAL_MECHANIC</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-TEAM-NRD/VIDEO-DOWNLODER")
+                                            "Source Code", url="https://github.com/SOCIAL-MECHANIC-1997/VIDEO-DOWNLODER")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -100,7 +100,7 @@ async def about(client, message):
 
 # https://docs.pyrogram.org/start/examples/bot_keyboards
 # Reply with inline keyboard
-@Jebot.on_message(filters.private
+@Angel.on_message(filters.private
                    & filters.text
                    & ~filters.edited
                    & filters.regex(YTDL_REGEX))
@@ -123,7 +123,7 @@ async def ytdl_with_button(c: Client, message: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Join Updates Channel", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("Join Updates Channel", url=f"https://t.me/social_mechanic")
                         ]
                     ]
                 ),
@@ -157,7 +157,7 @@ async def ytdl_with_button(c: Client, message: Message):
     )
 
 
-@Jebot.on_callback_query(filters.regex("^ytdl_audio$"))
+@Angel.on_callback_query(filters.regex("^ytdl_audio$"))
 async def callback_query_ytdl_audio(_, callback_query):
     try:
         url = callback_query.message.reply_to_message.text
@@ -235,7 +235,7 @@ else:
        os.remove(audio_file)
        os.remove(thumbnail_file)
 
-@Jebot.on_callback_query(filters.regex("^ytdl_video$"))
+@Angel.on_callback_query(filters.regex("^ytdl_video$"))
 async def callback_query_ytdl_video(_, callback_query):
     try:
         # url = callback_query.message.text
@@ -336,7 +336,7 @@ def get_resolution(info_dict):
     return (width, height)
 
 
-@Jebot.on_callback_query()
+@Angel.on_callback_query()
 async def button(bot, update):
       cb_data = update.data
       if "help" in cb_data:
@@ -352,8 +352,8 @@ async def button(bot, update):
 print(
     """
 Bot Started!
-Join @technology_corner_1
+Join @social_mechanic
 """
 )
 
-Jebot.run()
+Angel.run()
